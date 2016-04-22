@@ -49,14 +49,17 @@ public class SimpleExampleTimer {
 			});
 		}
 
+		@Override
 		public void componentDidMount() {
 			interval = any(setInterval(function(this::tick), 1000));
 		}
 
+		@Override
 		public void componentWillUnmount() {
 			clearInterval(interval);
 		}
 
+		@Override
 		public Element render() {
 			return any(createElement("div", (DOMAttributes) null, "Seconds Elapsed: ", this.state.secondsElapsed));
 		}

@@ -55,6 +55,7 @@ public class SimpleExampleTodoApp {
 			return any(createElement("li", (HTMLAttributes) $map("key", item.id), item.text));
 		}
 
+		@Override
 		public Element render() {
 			TodoListProps props = union(this.props);
 			return any(createElement("ul", EMPTY, array(array(props.items).map(this::createItem))));
@@ -95,6 +96,7 @@ public class SimpleExampleTodoApp {
 			});
 		}
 
+		@Override
 		public Element render() {
 			return any(createElement("div", EMPTY, //
 					createElement("h3", EMPTY, "TODO"), //

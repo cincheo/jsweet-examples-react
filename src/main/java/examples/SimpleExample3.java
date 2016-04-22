@@ -36,7 +36,8 @@ public class SimpleExample3 {
 	}
 	
 	static class ContactItem extends Component<Contact, Object> {
-
+		
+		@Override
 		public Element render() {
 			Contact contact = union(props);
 			return any(createElement("li", EMPTY, //
