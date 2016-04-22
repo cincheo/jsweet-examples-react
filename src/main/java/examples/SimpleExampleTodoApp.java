@@ -49,7 +49,7 @@ public class SimpleExampleTodoApp {
 		String text;
 	}
 
-	static class TodoList2 extends Component<TodoListProps, Object> {
+	static class TodoList extends Component<TodoListProps, Object> {
 
 		private Element createItem(TodoProps item, Double __, TodoProps[] ___) {
 			return any(createElement("li", (HTMLAttributes) $map("key", item.id), item.text));
@@ -100,7 +100,7 @@ public class SimpleExampleTodoApp {
 		public Element render() {
 			return any(createElement("div", EMPTY, //
 					createElement("h3", EMPTY, "TODO"), //
-					SimpleExampleTodoApp.createElementFromClass(TodoList2.class, new TodoListProps() {
+					SimpleExampleTodoApp.createElementFromClass(TodoList.class, new TodoListProps() {
 						{
 							items = state.items;
 						}
